@@ -20,6 +20,7 @@ let fb = new FB.Facebook();
 // THIS IS THE FORMAT
 // fb.api(path, method, options/parameters, callback)
 // API call for total likes on the most recent 20 posts
+let likesArr;
 fb.api(
    `/${process.env.USER_ID}/posts?limit=20`, 
    'GET',
@@ -28,7 +29,7 @@ fb.api(
         "access_token": process.env.ACCESS_TOKEN
     },
     function(response) {
-        let likesArr = Array.from(response.data).map(cur => cur.likes.summary.total_count);
+        likesArr = Array.from(response.data).map(cur => cur.likes.summary.total_count);
   }
 );
 

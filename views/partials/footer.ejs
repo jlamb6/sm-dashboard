@@ -7,10 +7,16 @@
                     $(this).addClass('active')
                     .siblings('.item')
                     .removeClass('active');
+                    let id = $(this).attr('id');
+                    let containerName = `${id}-container`;
+                    hideContentContainers();
+                    console.log(containerName);
+                    $(`#${containerName}`).show();
                 }
             });
-            function hideSMContainer() {
-                $("#social-media-container").hide();
+            
+            function hideContentContainers() {
+                $('.content-container').hide();
             }
         </script>
     </body>

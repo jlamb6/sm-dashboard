@@ -1,5 +1,7 @@
 @import "colors.less";
 
+@side-nav-width: 210px;
+
 
 .centered-container { 
         
@@ -23,12 +25,20 @@ i.google {
     color: @google-red;
 }
 
+i.instagram {
+    color: @ig-magenta;
+}
+
 i.facebook {
     color: @fb-blue-one;
 }
 
 .google.divider {
     background-color: @google-red;
+}
+
+.instagram.divider {
+    background-color: @ig-magenta;
 }
 
 .facebook.divider {
@@ -54,6 +64,27 @@ i.facebook {
     margin: 20px 40px 40px 250px;
 }
 
-.main-container {
+.content-container {
+    display: block;
+    margin-top: 80px;
+}
+
+.hidden {
     display: none;
+}
+
+.menu-shadow {
+    box-shadow: 2px 2px 2px #ecececec !important;
+}
+
+.top-menu-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: calc(@side-nav-width + 39px);
+    z-index: 1;
 }
