@@ -1,6 +1,5 @@
 <% include partials/header %>
-
-<div class="ui sidebar inverted visible vertical menu">
+<div id="main-nav" class="ui sidebar inverted visible vertical menu main-nav">
     <div class="centered-container">
         <h2 class="ui center aligned icon header light-grey">
             <i class="user cirlce outline icon"></i>
@@ -48,7 +47,9 @@
                         <div class="ui segment">
                             <div class="ui medium header"><i class="blue facebook icon"></i>Facebook</div>
                             <div class="ui facebook divider"></div>
-                            <div class="ui vertical segment">Likes</div>
+                            <div class="ui vertical segment">Likes - 
+                            <%= title + " Avg for last 20 posts" %>
+                            </div>
                             <div class="ui vertical segment">Shares</div>
                             <div class="ui vertical segment">Friends</div>
                         </div>
@@ -174,8 +175,295 @@
             </div>
         </div>
     </div>
-    <div id="accounts-container" class="content-container">
 
+
+    <div id="accounts-container" class="content-container account-container first">
+        <div id="social-media-accounts" >
+            <div class="ui stackable two column grid">
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/facebook-logo.png" alt="Facebook Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Facebook
+                                    </div>
+                                    <div class="meta">
+                                        Email : <span>jacobtaylorlamb@gmail.com</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Facebook account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="four wide column">
+                    <div class="ui segment col-desc">Social Media</div>
+                </div>
+
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/ig-logo.png" alt="Instagram Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Instagram
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>@jacobtaylorlamb</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Instagram account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="other-accounts account-container">
+            <div class="ui stackable two column grid">
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="four wide column col-desc">
+                    <div class="ui segment">Other Accounts</div>
+                </div>
+
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment">
+                        <div class="ui items">
+                            <div class="item">
+                                <div class="ui tiny image">
+                                    <img src="http://localhost:8000/images/github-logo.png" alt="Github Logo">
+                                </div>
+                                <div class="content">
+                                    <div class="ui large header">
+                                        Github
+                                    </div>
+                                    <div class="meta">
+                                        Username : <span>jlamb6</span>
+                                    </div>
+                                    <div class="description">
+                                        This is your Github account
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
     </div>
     <div id="analytics-container" class="content-container">
 

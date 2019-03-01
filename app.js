@@ -2,6 +2,7 @@ const express = require('express'),
       app = express(),
       port = 8000,
       mongoose = require('mongoose'),
+      bodyParser = require('body-parser'),
       request = require('request'),
       FB = require('fb'),
       url = 'mongodb://jakelamb1:7HeWCQBqqf1rRPtSc7DZD4LUehoXhlMnk5DLNwNv5vPnKGXwY8oVnBCvRsbny8i8UTFZd7pGsypmAaQYHoz3PQ%3D%3D@jakelamb1.documents.azure.com:10255/?ssl=true';
@@ -11,6 +12,12 @@ const express = require('express'),
     LESS is also loaded up and linked in the header
 */
 require('dotenv').config();
+
+mongoose.connect(url, {useNewUrlParser: false});
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 FB.options({version: 'v3.2', appId: process.env.APP_ID, appSecret: process.env.APP_SECRET});
 FB.setAccessToken(process.env.ACCESS_TOKEN);
@@ -33,16 +40,13 @@ fb.api(
   }
 );
 
-mongoose.connect(url, {useNewUrlParser: false});
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-
 app.get('/', (req, res) => {
     res.send("Get it fool");
 });
 
 app.get('/home', (req, res) => {
-    res.render('home');
+    let averageLikes = likesArr.reduce((acc, cur) => acc += cur) / likesArr.length;
+    res.render('home', {title: averageLikes});
 });
 
 app.listen(8000, () => {

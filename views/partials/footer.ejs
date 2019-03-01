@@ -18,6 +18,65 @@
             function hideContentContainers() {
                 $('.content-container').hide();
             }
+
+            $('.ui.sticky').sticky({
+                context: '#social-media-accounts',
+                offset: 80
+            });
+
+            $('#accounts').on('click', function() {
+                setTimeout(function() {
+                    $('.ui.sticky').sticky('refresh');
+                }, 500);
+            });
+
+            var options = {
+                //root: document.querySelector('#scrollArea'),
+                rootMargin: '80px',
+                threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 , 1.0]
+            }
+            let containers = Array.from(document.querySelectorAll(".account-container"));
+                
+            function observerCallback(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log(`intersecting at ${Math.floor(entry.intersectionRatio * 100)}%`);
+                        //update 'top' of the .col-desc
+                    }
+                    else {
+                        console.log("not intersecting");
+                        //remove the observer from this element and move it to the next container
+                    }
+                    observeNextContainer(containers, entry.target, entries);
+                });
+            } 
+            
+            let observer = new IntersectionObserver(observerCallback, options);
+            let target = $("#social-media-accounts")[0];
+            observer.observe(target); 
+            
+            /**
+            *  New, see what this does
+            */
+            let observersArr = [];
+            /* 
+            containers.forEach((cur, index) => {
+                observersArr.push(new IntersectionObserver(observerCallback, options));
+                observersArr[index].observe(cur);
+            });
+            */
+            function observeNextContainer(containers, cur, entries) {
+                let curIndex = containers.indexOf(cur);
+                let curPosition = cur.style.top;
+                console.log(`current position of container: ${curPosition}`);
+                if (!entries.isIntersecting) {
+                    let nextContainer = containers[curIndex + 1];
+                    //observer.unobserve(cur);
+                    //observer.observe(nextContainer);
+                }
+            }
+            /** */
+
         </script>
     </body>
 </html>
